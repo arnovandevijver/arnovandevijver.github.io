@@ -1,0 +1,36 @@
+---
+layout: default
+title: Blog
+current_section: blog
+---
+<div>
+    <div>
+        <h1>{{ page.title }}</h1>
+        <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
+    </div>
+    <div>
+
+        {% assign postYear = site.posts | group_by:"blogpostYear" %}
+        <!-- Loop on years -->
+        {% for postInYear in postYear %}
+            {% if forloop.first %}<ul>{% endif %}
+                <li>
+                    <!-- Posts by year -->
+                    <h2>{{ postInYear.name }}</h2>
+                    <!-- Loop on blogposts by year -->
+                    {% for item in postInYear.items %}
+                        {% if forloop.first %}<ul>{% endif %}
+                            <li class="posts">
+                                <p>{{ item.date | date: "%A, %B %dth %Y" }}</p>
+                                <h3>{{ item.blogpostTitle }}</h3>
+                                <p>{{ item.blogpostSummary }}</p>
+                                <p><a href="{{ item.url }}" class="btn--more">Read more</a></p>
+                            </li>
+                        {% if forloop.last %}</ul>{% endif %}
+                    {% endfor %}
+                </li>
+            {% if forloop.last %}</ul>{% endif %}
+        {% endfor %}
+
+    </div>
+</div>

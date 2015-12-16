@@ -1,0 +1,16 @@
+-
+    navLabel: "Homepage"
+    navUrl: "/"
+    navCurrent: "homepage"
+-
+    navLabel: "Blog"
+    navUrl: "/blog/"
+    navCurrent: "blog"
+-
+    navLabel: "Portfolio"
+    navUrl: "/portfolio/"
+    navCurrent: "portfolio"
+-
+    navLabel: "Contact"
+    navUrl: "/contact/"
+    navCurrent: "contact"

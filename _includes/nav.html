@@ -1,0 +1,7 @@
+<nav>
+    {% for item in site.data.nav %}
+        {% if forloop.first %}<ul>{% endif %}
+            <li class="nav__item"><a href="{{ item.navUrl }}" {% if page.current_section == item.navCurrent %}class="nav--actif"{% endif %}>{{ item.navLabel }}</a></li>
+        {% if forloop.last %}</ul>{% endif %}
+    {% endfor %}
+</nav>

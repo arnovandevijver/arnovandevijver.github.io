@@ -1,0 +1,20 @@
+---
+layout: default
+---
+
+<div>
+
+    <h1>{{ page.portfolioTitle }}</h1>
+    <p>{{ page.date | date: "%A, %B %dth %Y" }} - {{ page.portfolioCategory }}</p>
+    {{ content }}
+
+    {% if page.portfolioUrl %}
+        <a href="{{ page.portfolioUrl }}">{{ page.portfolioUrl }}</a>
+    {% endif %}
+
+    <ul>
+        {% for image in page.portfolioImages %}
+            <li><p class="img"><img src="/img/{{ image.file }}" alt="{{ image.description }}"></p></li>
+        {% endfor %}
+    </ul>
+</div>

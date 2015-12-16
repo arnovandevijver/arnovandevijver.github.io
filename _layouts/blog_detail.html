@@ -1,0 +1,11 @@
+---
+layout: default
+---
+
+<div>
+    <p>{{ page.date | date: "%A, %B %dth %Y" }}</p>
+    <h1>{{ page.blogpostTitle }}</h1>
+    <h4>{{ page.blogpostSummary }}</h4>
+    {{ content }}
+    <p>| {{ page.blogpostAutor}}</p>
+</div>
