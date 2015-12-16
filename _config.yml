@@ -18,8 +18,10 @@ markdown: kramdown
 collections:
     posts:
         output: true
+        permalink: /blog/:title/
     portfolio:
         output: true
+        permalink: /portfolio/:title/
 
 # Yaml defaults
 defaults:
@@ -28,7 +30,6 @@ defaults:
         path: ""
         type: "posts"
     values:
-        permalink: /blog/:title/
         layout: blog_detail
         current_section: blog
 
@@ -37,6 +38,5 @@ defaults:
         path: ""
         type: "portfolio"
     values:
-        permalink: /portfolio/:title/
         layout: portfolio_detail
         current_section: portfolio
