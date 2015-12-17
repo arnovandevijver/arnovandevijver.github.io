@@ -1,4 +1,5 @@
 ---
+date: 2013-04-21 00:00:00
 portfolioTitle: My first project
 portfolioCategory: Web
 portfolioUrl: http://arnovandevijver.be
